@@ -1,0 +1,719 @@
+/* ===========================
+   GLOBAL PATH IMMIGRATION
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#ffffff;
+    color:#333;
+}
+
+.top-bar{
+    background:#0A2F5A;
+    color:white;
+    padding:10px;
+    font-size:15px;
+}
+
+/* ==========================
+   PREMIUM HEADER
+========================== */
+
+header{
+    background:#123D72;
+    border-bottom:3px solid #FFC107;
+    box-shadow:0 5px 18px rgba(0,0,0,.15);
+}
+
+.navbar{
+    padding:15px 0;
+}
+
+.navbar-brand img{
+    width:85px;
+    height:85px;
+    object-fit:contain;
+}
+
+.logo-title{
+    color:#fff;
+    font-size:38px;
+    font-weight:800;
+    margin:0;
+}
+
+.logo-subtitle{
+    color:#FFC107;
+    font-size:20px;
+    letter-spacing:6px;
+    margin:0;
+}
+
+.nav-link{
+    position:relative;
+    color:#fff !important;
+    font-size:18px;
+    font-weight:600;
+    margin-left:30px;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#FFC107 !important;
+}
+
+.nav-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:3px;
+    background:#FFC107;
+    transition:.3s;
+}
+
+.nav-link:hover::after{
+    width:100%;
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero{
+
+background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+url('../images/australia.png');
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+min-height:700px;
+
+display:flex;
+
+align-items:center;
+
+}
+
+.hero h5{
+
+color:#FFD700;
+
+font-weight:700;
+
+letter-spacing:3px;
+
+margin-bottom:15px;
+
+}
+
+.hero-title{
+    font-size:70px;
+    font-weight:900;
+    color:#fff;
+    line-height:1.1;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    text-shadow:0 5px 20px rgba(0,0,0,.4);
+    white-space:nowrap;
+}
+
+.hero p{
+
+color:#f5f5f5;
+
+font-size:22px;
+
+margin:30px 0;
+
+line-height:35px;
+
+}
+
+.hero img{
+
+max-width:550px;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+.btn-warning{
+
+padding:15px 35px;
+
+font-weight:700;
+
+border-radius:50px;
+
+}
+
+.btn-outline-light{
+
+padding:15px 35px;
+
+border-radius:50px;
+
+margin-left:15px;
+
+}
+
+
+.btn-warning{
+
+padding:16px 40px;
+
+font-size:18px;
+
+border-radius:40px;
+
+font-weight:bold;
+
+}
+
+
+.btn-warning:hover{
+
+    background:#b8860b;
+
+}
+
+footer{
+
+    background:#0A2F5A;
+
+    color:white;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+/* ==========================
+   WHY CHOOSE CARDS
+========================== */
+
+.service-card{
+    min-height:320px;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.service-card .card-body{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    padding:35px 25px;
+}
+
+.service-card i{
+    font-size:55px;
+    color:#D4A017;
+    margin-bottom:20px;
+}
+
+.service-card h4{
+    font-size:24px;
+    font-weight:700;
+    color:#0A2F5A;
+    min-height:65px;
+    margin-bottom:15px;
+}
+
+.service-card p{
+    font-size:17px;
+    line-height:28px;
+    color:#555;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15)!important;
+}
+/* ==========================
+   WHATSAPP FLOAT BUTTON
+========================== */
+
+.whatsapp-float{
+    position:fixed;
+    width:65px;
+    height:65px;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:36px;
+    text-decoration:none;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    z-index:9999;
+    transition:.3s;
+}
+
+.whatsapp-float:hover{
+    background:#128C7E;
+    transform:scale(1.1);
+    color:#fff;
+}
+/* ==========================
+   SCROLL TO TOP BUTTON
+========================== */
+
+#topBtn{
+
+display:none;
+
+position:fixed;
+
+bottom:100px;
+
+right:25px;
+
+z-index:9999;
+
+width:60px;
+
+height:60px;
+
+border:none;
+
+outline:none;
+
+background:#0A2F5A;
+
+color:white;
+
+border-radius:50%;
+
+font-size:24px;
+
+cursor:pointer;
+
+transition:.3s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+#topBtn:hover{
+
+background:#D4A017;
+
+transform:translateY(-5px);
+
+}
+.counter{
+
+font-size:55px;
+
+font-weight:bold;
+
+color:#FFD700;
+
+}
+.iti{
+    width:100%;
+}
+
+.iti input{
+    width:100%;
+    height:48px;
+}
+/* Trusted Partners Slider */
+
+.partner-slider{
+
+width:100%;
+
+overflow:hidden;
+
+padding:20px 0;
+
+}
+
+.partner-track{
+
+display:flex;
+
+align-items:flex-start;
+
+gap:30px;
+
+width:max-content;
+
+animation:partners 35s linear infinite;
+
+}
+
+.partner-track img{
+
+width:220px;
+
+height:auto;
+
+display:block;
+
+object-fit:contain;
+
+border-radius:20px;
+
+background:#fff;
+
+padding:5px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+transition:0.4s ease;
+
+flex-shrink:0;
+
+}
+
+.partner-track img:hover{
+
+transform:scale(1.08);
+
+}
+
+@keyframes partners{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(-50%);
+
+}
+
+}
+/* Testimonials */
+
+.testimonial-slider{
+
+overflow:hidden;
+
+}
+
+.testimonial-track{
+
+display:flex;
+
+gap:20px;
+
+width:max-content;
+
+animation:testimonial 35s linear infinite;
+
+}
+
+.review-card{
+
+min-width:220px;
+
+background:#fff;
+
+border-radius:15px;
+
+padding:20px;
+
+text-align:center;
+
+box-shadow:0 5px 20px rgba(0,0,0,.12);
+
+}
+
+.review-card img{
+
+width:70px;
+
+height:70px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+margin-bottom:15px;
+
+}
+
+.review-card h6{
+
+font-weight:bold;
+
+margin-bottom:5px;
+
+}
+
+.stars{
+
+color:#ffc107;
+
+font-size:18px;
+
+margin-bottom:10px;
+
+}
+
+.review-card p{
+
+font-size:14px;
+
+color:#666;
+
+}
+
+@keyframes testimonial{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(-50%);
+
+}
+
+}
+/*=========================
+SOCIAL ICONS
+=========================*/
+
+.social-icons{
+margin-top:30px;
+}
+
+.social-icons a{
+
+display:inline-flex;
+
+justify-content:center;
+
+align-items:center;
+
+width:48px;
+
+height:48px;
+
+background:#123d72;
+
+border-radius:50%;
+
+margin-left:12px;
+
+color:#fff;
+
+font-size:20px;
+
+text-decoration:none;
+
+transition:.4s;
+
+}
+
+.social-icons a:hover{
+
+background:#FFD700;
+
+color:#0A2F5A;
+
+transform:translateY(-6px);
+
+}
+/* Footer Contact */
+
+.contact-item{
+
+display:flex;
+
+align-items:center;
+
+margin-bottom:10px;
+
+font-size:18px;
+
+color:#fff;
+
+}
+
+.contact-item i{
+
+width:28px;
+
+font-size:20px;
+
+color:#FFC107;
+
+margin-right:10px;
+
+}
+
+.contact-item span{
+
+line-height:1.6;
+
+}
+/* Footer Contact Heading */
+
+.footer-title{
+
+font-size:42px;
+
+font-weight:700;
+
+color:#fff;
+
+margin-bottom:30px;
+
+text-align:left;
+
+display:block;
+
+}
+
+.footer-title::after{
+
+content:"";
+
+display:block;
+
+width:160px;
+
+height:3px;
+
+background:#FFC107;
+
+margin-top:12px;
+
+border-radius:20px;
+
+}
+-------------------------------------------------------
+🟦 Gradient Blue Background
+
+[LOGO] GLOBAL PATH
+       IMMIGRATION
+
+                 Home  About  Services  Countries  Contact
+                      ───── (Gold Hover Line)
+
+-------------------------------------------------------
+.logo-title{
+
+margin:0;
+
+font-size:42px;
+
+font-weight:800;
+
+color:#fff;
+
+}
+
+.logo-subtitle{
+
+margin:0;
+
+font-size:22px;
+
+letter-spacing:6px;
+
+color:#FFC107;
+
+}
+/*=========================
+  PREMIUM HEADER
+=========================*/
+
+.custom-header{
+    background: linear-gradient(135deg,#0A2540,#123D72,#1B4D8C);
+    border-bottom:3px solid #FFC107;
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+}
+
+.custom-header .navbar{
+    padding:16px 0;
+}
+
+.custom-header .nav-link{
+    color:#fff !important;
+    font-size:18px;
+    font-weight:600;
+    margin-left:28px;
+}
+
+.custom-header .nav-link:hover{
+    color:#FFC107 !important;
+}
+
+.custom-header .nav-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:3px;
+    background:#FFC107;
+    transition:.3s;
+}
+
+.custom-header .nav-link:hover::after,
+.custom-header .nav-link.active::after{
+    width:100%;
+}
+
+.custom-header .navbar-brand img{
+    width:85px;
+    height:85px;
+}
+
+.custom-header .logo-title{
+    color:#fff;
+}
+
+.custom-header .logo-subtitle{
+    color:#FFC107;
+}
